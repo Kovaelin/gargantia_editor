@@ -3458,7 +3458,7 @@ var WebGLTechniqueParameters = (function () {
 // TechniqueParameterBuffer
 //
 var techniqueParameterBufferCreate = function techniqueParameterBufferCreateFn(params) {
-    if (Float32Array.prototype.map === undefined) {
+//    if (Float32Array.prototype.map === undefined) {
         Float32Array.prototype.map = function techniqueParameterBufferMap(offset, numFloats) {
             if (offset === undefined) {
                 offset = 0;
@@ -3499,7 +3499,7 @@ var techniqueParameterBufferCreate = function techniqueParameterBufferCreateFn(p
                 this[offset] = data[n];
             }
         };
-    }
+//    }
 
     return new Float32Array(params.numFloats);
 };
